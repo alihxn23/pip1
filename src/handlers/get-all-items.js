@@ -15,7 +15,7 @@ exports.getAllItemsHandler = async (event) => {
         throw new Error(`getAllItems just accept GET method, you tried: ${event.httpMethod}`);
     }
     // All log statements are written to CloudWatch
-    console.info('received:', event);
+    console.info('received event:', event);
 
     // get all items from the table (only first 1MB data, you can use `LastEvaluatedKey` to get the rest of data)
     // https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html#scan-property
